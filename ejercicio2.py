@@ -24,15 +24,27 @@ crearjson={
       }
   ]
 }
-with open("crearjson","w") as file:
-    json.dump(crearjson,file)
-#Cogemos el archivo json creado
-# y lo cargamos para asignarlo a una variable
-with open("crearjson","r") as patata:
-    result = json.load(patata)
-    #Lo que hemos cargado en file lo pasamos
-    # a una variable para poderlo imprimier
-    print(patata)
-    #Aqui indetamos el resultado
-    resultindent=(json.dumps(result, indent=2))
+
+
+def funcion1():
+    with open("crearjson", "w") as file:
+        json.dump(crearjson, file)
+    # Cogemos el archivo json creado
+    # y lo cargamos para asignarlo a una variable
+    with open("crearjson", "r") as patata:
+        result = json.load(patata)
+        print(result)
+
+
+def funcion2():
+    with open("crearjson", "w") as file:
+        json.dump(crearjson, file)
+    with open("crearjson", "r") as patata:
+        result = json.load(patata)
+    # Aqui indetamos el resultado
+    resultindent = (json.dumps(result, indent=2))
     print(resultindent)
+
+
+print(funcion1())
+print(funcion2())
